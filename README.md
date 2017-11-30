@@ -13,3 +13,10 @@ Windows+Anaconda+tensorflow+keras深度学习框架搭建
 9.安装完成后测试keras是否能用，import keras成功导入，且告诉我们底层用的是tensorflow
 
 执行python fully_connected_feed.py 使用Anaconda Prompt 或者cmd 命令行！！
+
+
+经过多次反复实验，train部分和predict部分先注释一个再运行程序！！
+
+
+怎么判断模型已训练到最优？
+使用TensorBoard给出loss和准确率。
