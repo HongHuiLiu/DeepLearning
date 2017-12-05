@@ -1,0 +1,40 @@
+github 上传项目方法：
+1）在github上创建项目
+2）使用git clone https://github.com/HongHuiLiu/DeepLearning.git克隆到本地
+3）编辑项目
+4）git add .（将改动添加到暂存区）
+5）git commit -m "提交说明"
+6）git push origin master 将本地更改推送到远程master分支
+这样你就完成了向远程仓库的推送。
+
+注意：如果在github的remote上已经有了文件，会出现错误。此时应当先pull一下，即：
+git pull origin master
+然后再进行：
+git push origin master
+
+
+1、注意：上传的文件一定不能大于100M，否则上传文件会在缓存里面无法实现任何上传功能。
+解决办法：方法一：git rm -r --cached 本地仓库文件位置
+                git commit --amend -CHEAD
+ 2、git pull失败，提示：fatal:refusing to merge unrelated histories
+ 在进行git pull时，添加一个可选项
+ git pull origin master --allow-unrelared-histories
+ 3、github上传时出现error: src refspec master does not match any解决办法
+ 问题产生原因：上传的目录中没有更新新文件，空目录是不能提交上去的
+ 解决办法：touch README
+          git add README
+          git commit -m "first commit"
+          git push origin master
+ 4、github上如何删除一个文件夹
+ git rm -r --cached some-directory
+ git commit -m "Remove the now ignored directory some-directory"
+ git push -u origin master
+ 5、github上文件夹是灰色的
+ 问题产生原因：文件夹中包含其他仓库，所以需要删除其中隐藏的.git文件夹
+ 解决办法：删除.git文件夹后，再删除github上面的灰色文件，重新上传。
+ 6、添加子模块
+ 1）在子模块的目录下，git submodule init
+ 2）git submodule update
+ 3）git commit -m "some word"
+ 4）git push -u origin master
+ 
