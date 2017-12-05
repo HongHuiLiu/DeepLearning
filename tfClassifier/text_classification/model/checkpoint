@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\project\\DeepLearning\\tfClassifier\\text_classification\\model\\model.tflearn"
+all_model_checkpoint_paths: "D:\\project\\DeepLearning\\tfClassifier\\text_classification\\model\\model.tflearn"
