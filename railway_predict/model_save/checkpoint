@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 model_checkpoint_path: "model.ckpt"
 all_model_checkpoint_paths: "model.ckpt"
+=======
+model_checkpoint_path: "modle.ckpt"
+all_model_checkpoint_paths: "modle.ckpt"
+>>>>>>> d9a3ff161ab2e4aa16b0227215267780a35f284d
